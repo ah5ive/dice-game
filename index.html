@@ -2,12 +2,39 @@
 <html>
 <head>
     <title>Dice Game</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/main.css" />
+
+
 </head>
 <body>
-    <header>My Header</header>
-        <content>My content</content>
-        <footer>My footer</footer>
+    <header>
+        <h1 id="mytitle">Dice Game</h1>
+        <h2>Just Drink Only</h2>
+    </header>
+        <main>
+            <div id="playerOne">
+              <h2> Player One</h2>
+              <h3 class="Score">Score:</h3>
+              <div id="diceOne" class="dice">6</div>
+            </div>
+
+            <div id="vesus">vs</div>
+
+            <div id="playerTwo">
+                <h2>Player Two</h2>
+                <h3 class="score">Score:</h3>
+                <div id="diceOne" class="dice">1</div>
+            </div>
+
+        </main>
+        <footer>
+            <button id="playOneButton">Player One</button>
+            <button id="restart">Restart</button>
+            <button id="reset">Reset Score</button>
+            <button id="playerTwoButton">Player Two</button>
+        </footer>
         <script type="text/javascript" src="script.js"></script>
 
 </body>
