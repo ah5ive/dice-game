@@ -15,8 +15,11 @@ function myRandomDiceOne (){
         console.log(diceThrowOne);
     }
 }*/
+//myPlayerOne function
+var myDiceOne = 0;
+var myDiceTwo = 0;
 
-function playerOne (event){
+function myPlayerOne (event){
     var myDiceOne = myRandomDiceOne();
     console.log("my dice one", myDiceOne);
     var diceOneResult = document.getElementById('diceOne');
@@ -28,10 +31,31 @@ function playerOne (event){
 //eventlistener to button one, add the throwdice function
 var myButtonOne = document.getElementById("playOneButton");
     //console.log("=====",myButtonOne);
+    myButtonOne.addEventListener('click',myPlayerOne);
 
-    myButtonOne.addEventListener('click',playerOne);
+//playerTwo function
+function myplayerTwo(event){
+    var myDiceTwo = myRandomDiceOne();
+    var diceTwoResult = document.getElementById("diceTwo");
+    diceTwoResult.innerHTML = myDiceTwo;
+    console.log("=====", myDiceTwo);
+}
 
-//button works
+var myButtonTwo = document.getElementById("playerTwoButton");
+    console.log("xxxxxx", myButtonTwo);
+    myButtonTwo.addEventListener("click",myplayerTwo);
 
-//create throwdice funtion
+//end player Two
+
+//reset function make number hiddden
+function myReset(){
+    var diceOneResult = document.getElementById('diceOne');
+        diceOneResult.style.visibility = "hidden";
+    var diceTwoResult = document.getElementById("diceTwo");
+        diceTwoResult.style.visibility = "hidden"
+}
+
+var resetButton = document.getElementById("reset");
+    console.log("~~~~~~",resetButton);
+    resetButton.addEventListener("click", myReset);
 
