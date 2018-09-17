@@ -3,6 +3,7 @@
 <head>
     <title>Dice Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel = "stylesheet" type = "text/css" href = "css/main.css" />
 
@@ -10,38 +11,36 @@
 </head>
 <body>
     <header>
-        <h1 id="mytitle">Dice Game</h1>
+        <h1 id="mytitle">NUMBER GAME</h1>
         <h2>Whichever the number is bigger wins</h2>
     </header>
         <main>
             <div id="playerOne">
               <h2>Player One</h2>
-              <h3 id="scoreOne"></h3>
+              <h3 id="scoreOne" class="score"></h3>
               <div id="diceOne" class="dice"></div>
-              <button id="playOneButton">Roll Dice One</button>
+              <button id="playOneButton" class="myButton">Roll Dice One</button>
               <!-- <h3 id="myplayerOne">Did Player One win?</h3> -->
 
             </div>
 
             <div id="vesus">
                 <h1>vs</h1>
-                <h3 id="whoWins">Who Wins?</h3>
+                <h3 id="whoWins" class="score">Who Wins?</h3>
+                <button id="restart" class="myButton">Restart</button>
                 <!-- <button id="playOneButton">Roll Dice</button> -->
             </div>
 
             <div id="playerTwo">
                 <h2>Player Two</h2>
-                <h3 id="scoreTwo"></h3>
+                <h3 id="scoreTwo" class="score"></h3>
                 <div id="diceTwo" class="dice"></div>
-                <button id="playerTwoButton">Roll Dice Two</button>
+                <button id="playerTwoButton" class="myButton">Roll Dice Two</button>
             </div>
 
         </main>
         <footer>
-            <button id="reset">Reset</button>
-            <button id="restart">Restart Game</button>
-
-
+            <!-- <button id="reset">Reset</button> -->
         </footer>
         <!-- <script type="text/javascript" src="script.js"></script> -->
         <script type="text/javascript" src="script2.js"></script>

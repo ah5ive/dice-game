@@ -3,11 +3,11 @@ console.log("link");
 //counterone
 var winCountOne = 0;
     getWinCoutOne = document.getElementById("scoreOne");
-    getWinCoutOne.innerHTML = "Wins:" + winCountOne;
+    getWinCoutOne.innerHTML = "Wins: " + winCountOne;
 //counttertwo
 var winCountTwo = 0;
 var getWinCountTwo = document.getElementById("scoreTwo");
-    getWinCountTwo.innerHTML = "wins:" + winCountTwo;
+    getWinCountTwo.innerHTML = "Wins: " + winCountTwo;
 
 function myRandomDice (){
     return Math.floor(Math.random()*6) + 1;
@@ -30,6 +30,7 @@ var myPlayerOne = function (event){
     console.log("my dice one", diceOne);
     var diceOneResult = document.getElementById('diceOne');
     diceOneResult.style.visibility = "visible";
+    diceOneResult.style.fontSize = "180px";
     diceOneResult.innerHTML = diceOne;
     //console.log("=====", myDiceOne);
     console.log("myPlayerOne",diceOne);
@@ -61,6 +62,7 @@ var myplayerTwo = function (event){
     //console.log("my dice two", myDiceTwo);
     var diceTwoResult = document.getElementById("diceTwo");
     diceTwoResult.style.visibility = "visible"
+    diceTwoResult.style.fontSize = "180px";
     diceTwoResult.innerHTML = diceTwo;
     //console.log("=====", myDiceTwo);
     console.log("myplayerTwo", diceTwo);
@@ -88,13 +90,13 @@ function myReset(){
         diceTwoResult.textContent = "";
 
     var showResult = document.getElementById("whoWins");
-            showResult.textContent = "";
+        showResult.textContent = "Who Wins?";
 }
 
-
-var resetButton = document.getElementById("reset");
-    console.log("~~~~~~",resetButton);
-    resetButton.addEventListener("click", myReset);
+//reset button
+// var resetButton = document.getElementById("reset");
+//     console.log("~~~~~~",resetButton);
+//     resetButton.addEventListener("click", myReset);
 
 //restart game
 function myRestart(){
@@ -114,12 +116,14 @@ var checkScore = function (diceOne,diceTwo){
         var showResult = document.getElementById("whoWins");
             showResult.textContent = "Player One Wins!";
             //reset deck
-            console.log("player one win");
+            //console.log("player one win");
             //add scores
             var addScoreOne = document.getElementById("scoreOne");
-            addScoreOne.textContent = "Wins:" + winCountOne++;
+            winCountOne++
+            addScoreOne.textContent = "Wins: " + winCountOne;
+            console.log("==counter1==",winCountOne);
             //need to reset the dices
-            setTimeout(myReset, 5000);
+            setTimeout(myReset, 2000);
         } else if (diceOne < diceTwo){
             console.log("player two win");
             //show result
@@ -129,10 +133,12 @@ var checkScore = function (diceOne,diceTwo){
             console.log("player one win");
 
             var addScoreTwo = document.getElementById("scoreTwo");
-            addScoreTwo.textContent = "Wins:" + winCountTwo++;
+            winCountTwo++
+            addScoreTwo.textContent = "Wins: " + winCountTwo;
+            console.log("==counter2==",winCountTwo);
             //add scores
             //need to reset the dices
-            setTimeout(myReset, 5000);
+            setTimeout(myReset, 2000);
         } else if (diceOne === diceTwo){
             console.log("It's a draw.");
         //show result
@@ -140,7 +146,7 @@ var checkScore = function (diceOne,diceTwo){
             showResult.textContent = "Draw";
             //add scores
             //need to reset the dices
-            setTimeout(myReset, 5000);
+            setTimeout(myReset, 2000);
         }
     }
     return checkScore;
