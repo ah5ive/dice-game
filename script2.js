@@ -1,5 +1,15 @@
 console.log("link");
 
+//counterone
+var winCountOne = 0;
+var getWinCountOne = document.getElementById("scoreOne");
+    getWinCountOne.innerHTML = "wins:" + winCountOne;
+
+//counttertwo
+var winCountTwo = 0;
+var getWinCountTwo = document.getElementById("scoreTwo");
+    getWinCountTwo.innerHTML = "wins:" + winCountTwo;
+
 function myRandomDice (){
     return Math.floor(Math.random()*6) + 1;
 }
@@ -24,7 +34,15 @@ var myPlayerOne = function (event){
     diceOneResult.innerHTML = diceOne;
     //console.log("=====", myDiceOne);
     console.log("myPlayerOne",diceOne);
+    checkScore(diceOne,diceTwo);
     return diceOne;
+
+
+
+    // if(diceTwo != null){
+    //     checkScore(diceOne,diceTwo);
+    //     console.log("p2null");
+    // };
 }
 
 var myButtonOne = document.getElementById("playOneButton");
@@ -47,7 +65,10 @@ var myplayerTwo = function (event){
     diceTwoResult.innerHTML = diceTwo;
     //console.log("=====", myDiceTwo);
     console.log("myplayerTwo", diceTwo);
+
+    checkScore(diceOne,diceTwo);
     return diceTwo;
+
 }
 
 var myButtonTwo = document.getElementById("playerTwoButton");
@@ -71,17 +92,18 @@ var resetButton = document.getElementById("reset");
     resetButton.addEventListener("click", myReset);
 
 
-var checkScore = function (diceOneResult,diceTwoResult){
-    if (diceOneResult == diceTwoResult){
-
+var checkScore = function (diceOne,diceTwo){
+    //NESTED IF else statement if not don't work
+    if (diceOne != null && diceTwo != null){
+        console.log("null");
+        if (diceOne < diceTwo){
+        console.log("player one win")
+        } else if (diceOne > diceTwo){
+        console.log("player two win")
+        } else if (diceOne === diceTwo){
+        console.log("It's a draw.")
+        }
     }
-//     else if (diceOneResult <= diceTwoResult){
-//     console.log("player one Win");
-//     } else if (diceTwoResult >= diceOneResult) {
-//         console.log("player two wins");
-//     }
-    console.log("draw",checkScore);
     return checkScore;
 }
 
-checkScore(diceOne,diceTwo);
