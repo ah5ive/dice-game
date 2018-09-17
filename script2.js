@@ -2,9 +2,8 @@ console.log("link");
 
 //counterone
 var winCountOne = 0;
-var getWinCountOne = document.getElementById("scoreOne");
-    getWinCountOne.innerHTML = "wins:" + winCountOne;
-
+    getWinCoutOne = document.getElementById("scoreOne");
+    getWinCoutOne.innerHTML = "Wins:" + winCountOne;
 //counttertwo
 var winCountTwo = 0;
 var getWinCountTwo = document.getElementById("scoreTwo");
@@ -81,8 +80,13 @@ function myReset(){
     console.log("reset1",diceOne)
     diceTwo = null;
     console.log("reset2",diceTwo)
+
     var diceOneResult = document.getElementById('diceOne');
         diceOneResult.textContent = "";
+
+    var showPlayerOne = document.getElementById("myplayerOne");
+        showPlayerOne.textContent = "";
+
     var diceTwoResult = document.getElementById("diceTwo");
         diceTwoResult.textContent = ""
 }
@@ -91,17 +95,39 @@ var resetButton = document.getElementById("reset");
     console.log("~~~~~~",resetButton);
     resetButton.addEventListener("click", myReset);
 
+//restart game
+function myRestart(){
+    location.reload();
+}
+
+var getRestart = document.getElementById("restart");
+    console.log("==restart works==", restart);
+    getRestart.addEventListener("click",myRestart);
+
 
 var checkScore = function (diceOne,diceTwo){
     //NESTED IF else statement if not don't work
     if (diceOne != null && diceTwo != null){
         console.log("null");
-        if (diceOne < diceTwo){
-        console.log("player one win")
-        } else if (diceOne > diceTwo){
+        if (diceOne > diceTwo){
+        var showResult = document.getElementById("whoWins");
+            showResult.textContent = "Player One Wins!"
+        console.log("player one win");
+        //add scores
+        //need to reset the dices
+        } else if (diceOne < diceTwo){
         console.log("player two win")
+        var showResult = document.getElementById("whoWins");
+            showResult.textContent = "Player Two Wins!"
+        console.log("player one win");
+        //add scores
+        //need to reset the dices
         } else if (diceOne === diceTwo){
         console.log("It's a draw.")
+        var showResult = document.getElementById("whoWins");
+            showResult.textContent = "Draw"
+        //add scores
+        //need to reset the dices
         }
     }
     return checkScore;
