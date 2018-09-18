@@ -8,11 +8,18 @@ var winCountOne = 0;
 var winCountTwo = 0;
 var getWinCountTwo = document.getElementById("scoreTwo");
     getWinCountTwo.innerHTML = "Wins: " + winCountTwo;
-
+//=====
+//global roll dice function
 function myRandomDice (){
     return Math.floor(Math.random()*6) + 1;
 }
-
+//===========
+//play sound function
+function playMySound(){
+    document.getElementById("diceSound").play();
+    console.log(playMySound);
+}
+//=====
 var playerOneResult = 0;
 var playerTwoResult = 0;
  //player one dices
@@ -49,7 +56,7 @@ var myPlayerOne = function (event){
 var myButtonOne = document.getElementById("playOneButton");
     console.log("=====",myButtonOne);
     myButtonOne.addEventListener('click',myPlayerOne);
-
+    myButtonOne.addEventListener('click',playMySound);
 //player two dice
 var myPlayerTwo = function(event){
     playerTwoDiceOne = myRandomDice();
@@ -78,7 +85,7 @@ var myPlayerTwo = function(event){
     var myButtonTwo = document.getElementById("playerTwoButton");
         console.log("xxxxxx", myButtonTwo);
         myButtonTwo.addEventListener("click",myPlayerTwo);
-
+        myButtonTwo.addEventListener("click",playMySound);
 //reset the deck
 function myReset(){
     //reset all dices
