@@ -1,0 +1,151 @@
+body {
+	font-family: 'Martel Sans', sans-serif;
+	background-image: url("../images/background.jpg");
+	background-size: contain;
+	background-size: cover;
+	background-color: black;
+}
+
+header {
+		text-align: center;
+    display: block;
+    /*background-color: red;*/
+    /*padding: 10px 0px;*/
+   /* width: auto;*/*/
+   	margin: 0 auto;
+    height: 100px;
+}
+
+main {
+	display:block;
+	/*background-color: yellow;*/
+	padding-top: 10px;
+	/*width: auto;*/
+	/*height: 290px;*/
+	height: 100%;
+}
+
+h1 {
+	margin-top: 25px;
+	display: block;
+	color: #cccccc;
+	font-weight: 900;
+	/*font-family: sans-serif;*/
+	font-size: 60px;
+	text-shadow: 0 0 10px #FF0000, 0 0 10px #0000FF;
+
+}
+
+#vesus h1 {
+	/*display: block;*/
+	color: #cccccc;
+	font-weight: 900;
+	/*font-family: sans-serif;*/
+	font-size: 40px;
+}
+
+h2 {
+	/*font-family: sans-serif;*/
+	color: #ff9900;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 2px 2px #000000;
+}
+
+h3.score {
+	color: #ffffff;
+	/*display: block;*/
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 2px 2px #000000;
+	padding-top: 10px;
+}
+
+/*h3 #scoreOne #whoWins #scoreTwo {
+	color: white;
+}*/
+
+p {
+	/*font-family: sans-serif;*/
+	color: #cccccc;
+	font-size: 10px;
+	}
+
+	#playerOne {
+		display: inline-block;
+		text-align: center;
+		float: left;
+		/*height: 150px;*/
+		height: 100%;
+		width: 35%;
+	}
+
+	#playerTwo {
+		display: inline-block;
+		text-align: center;
+		float:left;
+		/*height: 150px;*/
+		height: 100%;
+		width: 35%;
+	}
+
+	#vesus {
+		display: inline-block;
+		text-align: center;
+		float:left;
+		/*height: 290px;*/
+		height: 100%;
+		width: 30%;
+		font-size: 40px;
+	}
+
+#restart {
+margin-top: 95px;
+}
+
+#whoWins {
+margin-top: 40px;
+}
+
+.dice{
+	/*visibility: hidden;*/
+	padding-top: 10px;
+	height:165px;
+	font-size: 100px;
+	color: #cccc00;
+	/*position: relative;*/
+}
+
+.dice img {
+	width: 35%;
+	margin-top: 5px;
+}
+
+/*button*/
+.myButton{
+	background-color: #008CBA;
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	border-radius: 8px;
+	border: none;
+	box-shadow: 3px 3px 3px black;
+}
+
+.myButton:hover {
+	background-color: #666699;
+}
+
+footer {
+	text-align: center;
+	height:
+	display: block;
+	/*background-color: blue;*/
+	margin: 0 auto;
+	height: auto;
+	padding: auto 0px;
+
+}
+
