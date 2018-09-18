@@ -39,6 +39,8 @@ var myPlayerOne = function (event){
         console.log("myPlayerOneResult",playerOneResult);
 
         checkScore(playerOneResult,playerTwoResult);
+     //remove EventListener
+        this.removeEventListener('click',myPlayerOne);
 
     return playerOneResult;
 
@@ -49,7 +51,7 @@ var myButtonOne = document.getElementById("playOneButton");
     myButtonOne.addEventListener('click',myPlayerOne);
 
 //player two dice
-var myplayerTwo = function(event){
+var myPlayerTwo = function(event){
     playerTwoDiceOne = myRandomDice();
     playerTwoDiceTwo = myRandomDice();
     console.log(playerTwoDiceOne, playerTwoDiceTwo);
@@ -67,13 +69,15 @@ var myplayerTwo = function(event){
 
         checkScore(playerOneResult,playerTwoResult);
 
+        this.removeEventListener('click',myPlayerTwo);
+
     return playerTwoResult;
 
 }
 
     var myButtonTwo = document.getElementById("playerTwoButton");
         console.log("xxxxxx", myButtonTwo);
-        myButtonTwo.addEventListener("click",myplayerTwo);
+        myButtonTwo.addEventListener("click",myPlayerTwo);
 
 //reset the deck
 function myReset(){
@@ -85,6 +89,10 @@ function myReset(){
     playerOneResult = 0;
     playerTwoResult = 0;
     // reset player one image holder
+    //add back the button one click
+    myButtonOne.addEventListener('click',myPlayerOne);
+    //add back the button two click
+    myButtonTwo.addEventListener("click",myPlayerTwo);
     //dice one
     var getPlayerOneDoImg = document.getElementById("dieOne1");
     var dieOneName = "";
