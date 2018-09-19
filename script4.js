@@ -1,4 +1,7 @@
-console.log("link");
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+
+    console.log("link");
 
 //counterone
 var winCountOne = 0;
@@ -196,3 +199,6 @@ var checkScore = function (diceOne,diceTwo){
     }
     return checkScore;
 };
+
+  });
+
