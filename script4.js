@@ -17,8 +17,10 @@ function myRandomDice (){
 //play sound function
 function playMySound(){
     document.getElementById("diceSound").play();
-    console.log(playMySound);
+    console.log("playMySound works");
 }
+
+
 //=====
 var playerOneResult = 0;
 var playerTwoResult = 0;
@@ -35,10 +37,12 @@ var myPlayerOne = function (event){
     console.log(playerOneDiceOne,playerOneDiceTwo);
     //dice one
     var getPlayerOneDoImg = document.getElementById("dieOne1");
+        getPlayerOneDoImg.className = "diceShake";
     var dieOneName = "dice" + playerOneDiceOne + ".png";
         getPlayerOneDoImg.src = "images/"+ dieOneName;
    //dice two
     var getPlayerOneDtImg = document.getElementById("dieOne2");
+        getPlayerOneDtImg.className = "diceShake";
     var dieTwoName = "dice" + playerOneDiceTwo + ".png";
         getPlayerOneDtImg.src = "images/"+ dieTwoName;
     //total result
@@ -46,8 +50,11 @@ var myPlayerOne = function (event){
         console.log("myPlayerOneResult",playerOneResult);
 
         checkScore(playerOneResult,playerTwoResult);
-     //remove EventListener
+        //playsound;
+        playMySound();
+
         this.removeEventListener('click',myPlayerOne);
+        // this.removeEventListener('click',playMySound);
 
     return playerOneResult;
 
@@ -56,7 +63,7 @@ var myPlayerOne = function (event){
 var myButtonOne = document.getElementById("playOneButton");
     console.log("=====",myButtonOne);
     myButtonOne.addEventListener('click',myPlayerOne);
-    myButtonOne.addEventListener('click',playMySound);
+    // myButtonOne.addEventListener('click',playMySound);
 //player two dice
 var myPlayerTwo = function(event){
     playerTwoDiceOne = myRandomDice();
@@ -64,10 +71,12 @@ var myPlayerTwo = function(event){
     console.log(playerTwoDiceOne, playerTwoDiceTwo);
     //dice 1
     var getPlayerTwoDoImg = document.getElementById("dieTwo1");
+        getPlayerTwoDoImg.className = "diceShake";
     var dieOneName = "dice" + playerTwoDiceOne + ".png";
         getPlayerTwoDoImg.src = "images/"+ dieOneName;
     //dice 2
     var getPlayerTwoDtImg = document.getElementById("dieTwo2");
+        getPlayerTwoDtImg.className = "diceShake";
     var dieOneName = "dice" + playerTwoDiceTwo + ".png";
         getPlayerTwoDtImg.src = "images/"+ dieOneName;
 
@@ -75,6 +84,8 @@ var myPlayerTwo = function(event){
         console.log("playerTwoResult", playerTwoResult);
 
         checkScore(playerOneResult,playerTwoResult);
+
+        playMySound();
 
         this.removeEventListener('click',myPlayerTwo);
 
@@ -85,7 +96,7 @@ var myPlayerTwo = function(event){
     var myButtonTwo = document.getElementById("playerTwoButton");
         console.log("xxxxxx", myButtonTwo);
         myButtonTwo.addEventListener("click",myPlayerTwo);
-        myButtonTwo.addEventListener("click",playMySound);
+
 //reset the deck
 function myReset(){
     //reset all dices
@@ -104,19 +115,23 @@ function myReset(){
     var getPlayerOneDoImg = document.getElementById("dieOne1");
     var dieOneName = "";
         getPlayerOneDoImg.src = "";
+        getPlayerOneDoImg.className = "";
    //dice two
     var getPlayerOneDtImg = document.getElementById("dieOne2");
     var dieTwoName = "";
         getPlayerOneDtImg.src = "";
+        getPlayerOneDtImg.className = "";
     // reset player two image holder
     //dice 1
     var getPlayerTwoDoImg = document.getElementById("dieTwo1");
     var dieOneName = "";
         getPlayerTwoDoImg.src = "";
+        getPlayerTwoDoImg.className = "";
     //dice 2
     var getPlayerTwoDtImg = document.getElementById("dieTwo2");
     var dieOneName = ""
         getPlayerTwoDtImg.src = "";
+        getPlayerTwoDtImg.className ="";
     //reset text
     var showResult = document.getElementById("whoWins");
         showResult.textContent = "Who Will Win?";

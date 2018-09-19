@@ -106,7 +106,7 @@ margin-top: 95px;
 }
 
 #whoWins {
-margin-top: 40px;
+margin-top: 40px
 }
 
 .dice{
@@ -115,13 +115,43 @@ margin-top: 40px;
 	height:165px;
 	font-size: 100px;
 	color: #cccc00;
+	 /* Safari 4.0 - 8.0 */
 	/*position: relative;*/
 }
 
 .dice img {
 	width: 35%;
+	position: relative;
 	margin-top: 5px;
 }
+
+
+ .diceShake {
+ 	animation-name: rollDice;
+  animation-duration: .2s;
+  -webkit-animation-name: rollDice;  /*Safari 4.0 - 8.0*/
+  -webkit-animation-duration: .2s;
+		/*Safari 4.0 - 8.0 */
+}
+/*animation for dice*/
+/*@keyframes rollDice {
+		0%  	{	left: 0px; top:4px;}
+  	50% 	{	left: 4px; top:0px;}
+    100% 	{	left: 0px; top:0px;}
+}*/
+
+@keyframes rollDice {
+  10%,30%,50%,70%,90%
+  			{left: 20px; top: 0px;}
+  20%,40%,60%,80%
+  			{left: -20px; top:px;}
+	15%,35%,55%,75%,95%
+  			{transform: rotate(-30deg)}
+  25%,45%,65%,85%
+  			{transform: rotate(30deg)}
+}
+
+
 
 /*button*/
 .myButton{
