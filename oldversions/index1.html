@@ -5,43 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Martel+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel = "stylesheet" type = "text/css" href = "css/main2.css" />
+    <link rel = "stylesheet" type = "text/css" href = "css/main.css" />
 
 
 </head>
 <body>
     <header>
-        <h1 id="mytitle">DICE GAME</h1>
-        <h2>Whichever number is bigger wins</h2>
+        <h1 id="mytitle">NUMBER GAME</h1>
+        <h2>Whichever the number is bigger wins</h2>
     </header>
         <main>
             <div id="playerOne">
               <h2>Player One</h2>
               <h3 id="scoreOne" class="score"></h3>
-              <div id="diceOne" class="dice">
-                <img id="dieOne1" src="">
-                <img id="dieOne2" src="">
-              </div>
-              <button id="playOneButton" class="myButton">
-                <audio id="diceSound" src="sound/rolldice.mp3"></audio><!--  -->
-              Roll Dice
-            </button>
+              <div id="diceOne" class="dice"></div>
+              <button id="playOneButton" class="myButton">Roll Dice One</button>
+              <!-- <h3 id="myplayerOne">Did Player One win?</h3> -->
+
             </div>
 
             <div id="vesus">
                 <h1>vs</h1>
-                <h3 id="whoWins" class="score">Who Will Win?</h3>
+                <h3 id="whoWins" class="score">Who Wins?</h3>
                 <button id="restart" class="myButton">Restart</button>
+                <!-- <button id="playOneButton">Roll Dice</button> -->
             </div>
 
             <div id="playerTwo">
                 <h2>Player Two</h2>
                 <h3 id="scoreTwo" class="score"></h3>
-                <div id="diceTwo" class="dice">
-                    <img id="dieTwo1" src="">
-                    <img id="dieTwo2" src="">
-                </div>
-                <button id="playerTwoButton" class="myButton"><audio id="diceSound" src="sound/rolldice.mp3"></audio>Roll Dice</button>
+                <div id="diceTwo" class="dice"></div>
+                <button id="playerTwoButton" class="myButton">Roll Dice Two</button>
             </div>
 
         </main>
@@ -49,7 +43,7 @@
             <!-- <button id="reset">Reset</button> -->
         </footer>
         <!-- <script type="text/javascript" src="script.js"></script> -->
-        <script type="text/javascript" src="script4.js"></script>
+        <script type="text/javascript" src="script2.js"></script>
 
 </body>
 </html>
